@@ -48,6 +48,7 @@ def clean_store(df):
     # Adds month & year columns
     df['month'] = df.index.month
     df['year'] = df.index.year
+    df['day_of_week'] = df.index.day_name()
     # Adds Sales total column
     df['sales_total'] = df.sale_amount * df.item_price
 
